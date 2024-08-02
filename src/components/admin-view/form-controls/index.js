@@ -7,18 +7,18 @@ export default function FormControls({ controls, formData, setFormData }) {
         {controlItem.label}
       </label>
       <input
-        className="shadow border rounded w-full py-2 px-3 text-gray-700 tracking-wide focus:outline-none focus:shadow-outline"
         placeholder={controlItem.placeholder}
         type={controlItem.type}
         name={controlItem.name}
-        id={controlItem.id}
-        value={controlItem.name}
+        id={controlItem.name}
+        value={formData[controlItem.name]}
         onChange={(e) => {
           setFormData({
             ...formData,
             [controlItem.name]: e.target.value,
           });
         }}
+        className="shadow border rounded w-full py-2 px-3 text-gray-700 tracking-wide focus:outline-none focus:shadow-outline"
       />
     </div>
   ));

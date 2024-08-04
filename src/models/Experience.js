@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-const ExperienceShema = new mongoose.Schema(
+const ExperienceSchema = new mongoose.Schema(
   {
     position: String,
     company: String,
@@ -12,6 +12,6 @@ const ExperienceShema = new mongoose.Schema(
 );
 
 const Experience =
-  mongoose.models.Experience || mongoose.model("Experience", ExperienceShema);
+  mongoose.models.Experience || mongoose.model("Experience", ExperienceSchema);
 
 export default Experience;

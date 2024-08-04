@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-const AboutShema = new mongoose.Schema(
+const AboutSchema = new mongoose.Schema(
   {
     aboutme: String,
     noofprojects: String,
@@ -11,6 +11,6 @@ const AboutShema = new mongoose.Schema(
   { timestamps: true }
 );
 
-const About = mongoose.models.About || mongoose.model("About", AboutShema);
+const About = mongoose.models.About || mongoose.model("About", AboutSchema);
 
 export default About;

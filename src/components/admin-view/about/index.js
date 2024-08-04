@@ -35,7 +35,11 @@ const controls = [
   },
 ];
 
-export default function AdminAboutView({ formData, setFormData }) {
+export default function AdminAboutView({
+  formData,
+  setFormData,
+  handleSaveData,
+}) {
   return (
     <div className="w-full">
       <div className="bg-[#ffffff] shadow-md rounded px-8 pt-6 pb-8 mb-4">

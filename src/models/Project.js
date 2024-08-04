@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-const ProjectShema = new mongoose.Schema(
+const ProjectSchema = new mongoose.Schema(
   {
     name: String,
     website: String,
@@ -11,6 +11,6 @@ const ProjectShema = new mongoose.Schema(
 );
 
 const Project =
-  mongoose.models.Project || mongoose.model("Project", ProjectShema);
+  mongoose.models.Project || mongoose.model("Project", ProjectSchema);
 
 export default Project;

@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-const EducationShema = new mongoose.Schema(
+const EducationSchema = new mongoose.Schema(
   {
     degree: String,
     year: String,
@@ -10,6 +10,6 @@ const EducationShema = new mongoose.Schema(
 );
 
 const Education =
-  mongoose.models.Education || mongoose.model("Education", EducationShema);
+  mongoose.models.Education || mongoose.model("Education", EducationSchema);
 
 export default Education;

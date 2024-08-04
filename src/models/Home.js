@@ -1,13 +1,13 @@
 import mongoose from "mongoose";
 
-const HomeShema = new mongoose.Schema(
+const HomeSchema = new mongoose.Schema(
   {
-    heading: "String",
-    summary: "String",
+    heading: String,
+    summary: String,
   },
   { timestamps: true }
 );
 
-const Home = mongoose.models.Home || mongoose.model("Home", HomeShema);
+const Home = mongoose.models.Home || mongoose.model("Home", HomeSchema);
 
 export default Home;

@@ -130,7 +130,7 @@ export default function AdminView() {
     {
       id: "contact",
       label: "Contact",
-      component: <AdminContactView />,
+      component: <AdminContactView data={addData && allData?.project} />,
     },
   ];
 

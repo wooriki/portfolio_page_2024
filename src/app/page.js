@@ -1,8 +1,8 @@
-// import ClientAboutView from "@/components/client-view/about";
-// import ClientContactView from "@/components/client-view/contact";
-// import ClientExperienceAndEducationView from "@/components/client-view/experience";
-// import ClientHomeView from "@/components/client-view/home";
-// import ClientProjectView from "@/components/client-view/project";
+import ClientAboutView from "@/components/client-view/about/index";
+import ClientContactView from "@/components/client-view/contact/index";
+import ClientExperienceAndEducationView from "@/components/client-view/exprience/index";
+import ClientHomeView from "@/components/client-view/home/index";
+import ClientProjectView from "@/components/client-view/project/index";
 
 async function extractAllDatas(currentSection) {
   const res = await fetch(`http://localhost:3000/api/${currentSection}/get`, {
@@ -24,8 +24,8 @@ export default async function Home() {
 
   return (
     <div>
-      {/* <ClientHomeView data={homeSectionData} /> */}
-      {/* <ClientAboutView
+      <ClientHomeView data={homeSectionData} />
+      <ClientAboutView
         data={
           aboutSectionData && aboutSectionData.length ? aboutSectionData[0] : []
         }
@@ -35,7 +35,7 @@ export default async function Home() {
         experienceData={experienceSectionData}
       />
       <ClientProjectView data={projectSectionData} />
-      <ClientContactView /> */}
+      <ClientContactView />
     </div>
   );
 }

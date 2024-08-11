@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+import aiImage from "../../../assets/ai-image.png";
 import { useEffect, useState } from "react";
 import { Link as LinkScroll, scroller } from "react-scroll";
 
@@ -18,7 +20,7 @@ const menuItems = [
   },
   {
     id: "project",
-    label: "projects",
+    label: "Projects",
   },
   {
     id: "contact",
@@ -97,9 +99,15 @@ export default function Navbar() {
                   smooth: true,
                 })
               }
-              className="py-3 px-6 border-[2px] bg-[#fff] border-green-main text-[#000] font-semibold rounded-lg text-xl tracking-widest hover:shadow-green-md transition-all outline-none"
+              className="py-2 px-2 border-[2px] bg-[#fff] border-green-main text-[#000] font-semibold rounded-[50%] text-xl tracking-widest hover:shadow-green-md transition-all outline-none"
             >
-              Contact Me
+              <Image
+                src={aiImage}
+                alt="Profile Picture"
+                quality={10}
+                priority
+                style={{ width: "40px", height: "40px", borderRadius: "50%" }}
+              />
             </button>
           </div>
         </nav>

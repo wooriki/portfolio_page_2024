@@ -166,8 +166,6 @@ export default function AdminView() {
     }
   }
 
-  console.log(allData, "allData");
-
   async function handleSaveData() {
     const dataMap = {
       home: homeViewFormData,
@@ -251,8 +249,10 @@ export default function AdminView() {
         </button>
       </nav>
       <div className="mt-10 p-10">
-        {menuItems.map(
-          (item) => item.id === currentSelectedTab && item.component
+        {menuItems.map((item) =>
+          item.id === currentSelectedTab && item.component ? (
+            <div key={item.id}>{item.component}</div>
+          ) : null
         )}
       </div>
     </div>

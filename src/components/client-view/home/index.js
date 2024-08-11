@@ -124,16 +124,16 @@ export default function ClientHomeView({ data }) {
             <motion.div
               drag
               dragConstraints={containerRef}
-              className="w-[400px] h-[400px] relative bg-green-main"
+              className="w-[400px] h-[400px] relative bg-green-main rounded-[10px]"
             >
               <div className="w-[400px] h-[400px] top-[40px] left-[-30px] rounded-lg border-[6px] border-[#000000] absolute"></div>
               <Image
                 src={aiImage}
                 alt="Profile Picture"
                 quality={100}
-                className="absolute top-[-15px]"
+                className="absolute "
                 priority
-                style={{ height: "auto" }}
+                style={{ height: "100%", borderRadius: "10px" }}
               />
             </motion.div>
           </motion.div>

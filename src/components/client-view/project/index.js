@@ -4,27 +4,21 @@ import AnimationWrapper from "../animation-wrapper";
 import { motion, useScroll } from "framer-motion";
 import { useRouter } from "next/navigation";
 
-function variants() {
-  return {
-    offscreen: {
-      y: 150,
-      opacity: 0,
-    },
-    onscreen: ({ duration = 2 } = {}) => ({
-      y: 0,
-      opacity: 1,
-      transition: {
-        type: "spring",
-        duration,
-      },
-    }),
-  };
-}
-
 export default function ClientProjectView({ data }) {
   const containerRef = useRef(null);
   const { scrollXProgress } = useScroll({ container: containerRef });
-  const setVariants = useMemo(() => variants(), []);
+
+  const router = useRouter();
+
+  let updatedData = [
+    ...data,
+    ...data,
+    ...data,
+    ...data,
+    ...data,
+    ...data,
+    ...data,
+  ];
   return (
     <div
       className="max-w-screen-xl mt-24 mb-6 sm:mt-14 sm:mb-14 px-6 sm:px-8 lg:px-16 mx-auto"
@@ -63,8 +57,8 @@ export default function ClientProjectView({ data }) {
       </AnimationWrapper>
       <AnimationWrapper>
         <ul className="project-wrapper" ref={containerRef}>
-          {data && data.length
-            ? data.map((item, index) => (
+          {updatedData && updatedData.length
+            ? updatedData.map((item, index) => (
                 <li
                   key={index}
                   className="w-full flex items-stretch cursor-pointer"
@@ -96,16 +90,16 @@ export default function ClientProjectView({ data }) {
                         </div>
                       </div>
                     </div>
-                    <div className="absolute w-full bottom-0 justify-center flex gap-2">
+                    <div className="absolute w-full bottom-2 justify-center flex gap-2">
                       <button
                         onClick={() => router.push(item.website)}
-                        className="p-2 text-white-500 font-semibold text-[14px] tracking-widest bg-green-main transition-all outline-none"
+                        className="p-2 text-white-500 font-semibold text-[14px] tracking-widest rounded-lg bg-green-main transition-all outline-none"
                       >
                         Website
                       </button>
                       <button
                         onClick={() => router.push(item.github)}
-                        className="p-2 text-white-500 font-semibold text-[14px] tracking-widest bg-green-main transition-all outline-none"
+                        className="p-2 text-white-500 font-semibold text-[14px] tracking-widest rounded-lg bg-green-main transition-all outline-none"
                       >
                         Github
                       </button>

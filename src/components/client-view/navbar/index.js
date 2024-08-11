@@ -42,8 +42,8 @@ function CreateMenus({ activeLink, getMenuItems, setActiveLink }) {
       className={`px-4 py-2 mx-2 cursor-pointer animation-hover inline-block relative
     ${
       activeLink === item.id
-        ? "text-green-main animation-active shadow-green-main"
-        : "text-[#000] font-bold hover:text-green-main"
+        ? "text-blue-main animation-active shadow-blue-main"
+        : "text-[#000] font-bold hover:text-blue-main"
     }
     `}
     >
@@ -107,7 +107,7 @@ export default function Navbar() {
                   smooth: true,
                 })
               }
-              className="py-1 px-1 border-[2px] bg-[#fff] border-green-main text-[#000] font-semibold rounded-[50%] text-xl tracking-widest hover:shadow-blue-md transition-all outline-none"
+              className="py-1 px-1 border-[2px] bg-[#fff]  border-purple-main   font-semibold rounded-[50%] tracking-widest hover:shadow-blue-md transition-all outline-none"
             >
               <Image
                 src={aiImage}

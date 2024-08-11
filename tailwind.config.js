@@ -34,7 +34,10 @@ module.exports = {
         main: "#0DB760",
       },
       blue: {
-        main: "00ccff",
+        main: "#00ccff",
+      },
+      purple: {
+        main: "#7c0080",
       },
       white: {
         300: "#F8F8F8",

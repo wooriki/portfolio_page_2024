@@ -121,7 +121,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: green;
+  background: rgba(0, 204, 255, 1);
   -webkit-border-radius: 1ex;
 }
 
@@ -153,9 +153,20 @@ circle {
 }
 
 .MuiTimelineDot-root {
-  background-color: rgba(47, 171, 115, 1) !important;
+  background-color: rgba(0, 204, 255, 1) !important;
 }
 
 .MuiTimelineConnector-root {
-  background-color: rgba(47, 171, 115, 1) !important;
+  background-color: rgba(0, 204, 255, 1) !important;
+}
+
+.text-gradient {
+  background: linear-gradient(to right, #00ccff, #7c0080);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.border-gradient {
+  border-image: linear-gradient(to right, #00ccff, #7c0080);
+  border-image-slice: 1;
 }

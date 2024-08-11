@@ -9,8 +9,10 @@ import {
   FaInstagram,
   FaTwitter,
 } from "react-icons/fa";
+import { VscGithub } from "react-icons/vsc";
 import Image from "next/image";
 import aiImage from "../../../assets/ai-image.png";
+import { useRouter } from "next/navigation";
 
 function variants() {
   return {
@@ -29,47 +31,51 @@ function variants() {
   };
 }
 
-const socialIcons = [
-  {
-    id: "facebook",
-    icon: (
-      <FaFacebookF
-        color="rgba(13, 183, 96, 1)"
-        className="w-[40px] h-[40px] "
-      />
-    ),
-  },
-  {
-    id: "twitter",
-    icon: (
-      <FaTwitter color="rgba(13, 183, 96, 1)" className="w-[40px] h-[40px] " />
-    ),
-  },
-  {
-    id: "linkedin",
-    icon: (
-      <FaLinkedinIn
-        color="rgba(13, 183, 96, 1)"
-        className="w-[40px] h-[40px] "
-      />
-    ),
-  },
-  {
-    id: "instagram",
-    icon: (
-      <FaInstagram
-        color="rgba(13, 183, 96, 1)"
-        className="w-[40px] h-[40px] "
-      />
-    ),
-  },
-];
-
 export default function ClientHomeView({ data }) {
+  const socialIcons = [
+    {
+      id: "github",
+      icon: (
+        <VscGithub
+          color="rgba(0, 204, 255, 1)"
+          className="w-[40px] h-[40px] "
+          onClick={() => router.push("https://github.com/wooriki")}
+        />
+      ),
+    },
+    {
+      id: "twitter",
+      icon: (
+        <FaTwitter
+          color="rgba(0, 204, 255, 0.3)"
+          className="w-[40px] h-[40px] "
+        />
+      ),
+    },
+    {
+      id: "linkedin",
+      icon: (
+        <FaLinkedinIn
+          color="rgba(0, 204, 255, 0.3)"
+          className="w-[40px] h-[40px] "
+        />
+      ),
+    },
+    {
+      id: "instagram",
+      icon: (
+        <FaInstagram
+          color="rgba(0, 204, 255, 0.3)"
+          className="w-[40px] h-[40px] "
+        />
+      ),
+    },
+  ];
   console.log(data, "ClientHomeView");
 
   const setVariants = useMemo(() => variants(), []);
   const containerRef = useRef(null);
+  const router = useRouter();
 
   return (
     <div className="max-w-screen-xl mt-24 px-8 xl:px-16 mx-auto" id="home">
@@ -88,7 +94,7 @@ export default function ClientHomeView({ data }) {
                       key={index}
                       className={`${
                         index === 2 || index === 3
-                          ? "text-green-main"
+                          ? "text-gradient"
                           : "text-[#000]"
                       }`}
                     >
@@ -124,7 +130,7 @@ export default function ClientHomeView({ data }) {
             <motion.div
               drag
               dragConstraints={containerRef}
-              className="w-[400px] h-[400px] relative bg-green-main rounded-[10px]"
+              className="w-[400px] h-[400px] relative rounded-[10px] object-fit"
             >
               <div className="w-[400px] h-[400px] top-[40px] left-[-30px] rounded-lg border-[6px] border-[#000000] absolute"></div>
               <Image
@@ -133,7 +139,7 @@ export default function ClientHomeView({ data }) {
                 quality={100}
                 className="absolute "
                 priority
-                style={{ height: "100%", borderRadius: "10px" }}
+                style={{ objectFit: "cover", borderRadius: "10px" }}
               />
             </motion.div>
           </motion.div>

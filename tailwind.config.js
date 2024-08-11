@@ -14,9 +14,8 @@ module.exports = {
       lg: "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)",
       xl: "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)",
       t: "0 -1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)",
-      orange: "0px 20px 20px -15px rgba(245,56,56,0.81) ",
-      "green-md": "0px 20px 40px -15px rgba(245,56,56,0.81) ",
-      "green-md": "0px 20px 40px -15px rgba(13, 183, 96, 0.81)",
+      orange: "0px 20px 20px -15px rgba(245,56,56,0.81)",
+      "blue-md": "0px 20px 40px -15px rgba(0, 204, 255, 1)",
       none: "none",
     },
     colors: {
@@ -34,6 +33,9 @@ module.exports = {
         500: "#2FAB73",
         main: "#0DB760",
       },
+      blue: {
+        main: "00ccff",
+      },
       white: {
         300: "#F8F8F8",
         500: "#fff",
@@ -44,7 +46,12 @@ module.exports = {
         500: "#DDDDDD",
       },
     },
-    extend: {},
+    extend: {
+      backgroundImage: {
+        "blue-to-purple": "linear-gradient(to right, #0000FF, #800080)",
+        "green-to-purple": "linear-gradient(to right, #0DB760, #800080)",
+      },
+    },
   },
   variants: {
     extend: {

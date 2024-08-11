@@ -1,7 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import aiImage from "../../../assets/ai-image.png";
+import aiImage from "../../../assets/emojis.png";
+import logoImage from "../../../assets/favicon.png";
 import { useEffect, useState } from "react";
 import { Link as LinkScroll, scroller } from "react-scroll";
 
@@ -76,9 +77,16 @@ export default function Navbar() {
       >
         <nav className="max-w-screen-xl px-6 sm:px-8 lg:px-16 mx-auto grid grid-flow-col py-3 sm:py-4">
           <div className="col-start-1 col-end-2 flex items-center">
-            <div className="cursor-pointer flex gap-2 font-bold items-center text-[20px] text-green-main">
-              <div className="w-[40px] h-[40px] flex justify-center items-center p-3 rounded-[8px] border-green-main bg-green-main">
-                <span className="text-[#fff] text-[25px] font-bold">P</span>
+            <div className="cursor-pointer flex font-bold items-center text-[20px] text-gradient">
+              <div className="w-[40px] h-[40px]">
+                {/* <span className="text-[#fff] text-[25px] font-bold">P</span> */}
+                <Image
+                  src={logoImage}
+                  alt="Profile Picture"
+                  quality={10}
+                  priority
+                  style={{ width: "40px", height: "40px", borderRadius: "50%" }}
+                />
               </div>
               ortfolio
             </div>
@@ -99,14 +107,14 @@ export default function Navbar() {
                   smooth: true,
                 })
               }
-              className="py-2 px-2 border-[2px] bg-[#fff] border-green-main text-[#000] font-semibold rounded-[50%] text-xl tracking-widest hover:shadow-green-md transition-all outline-none"
+              className="py-1 px-1 border-[2px] bg-[#fff] border-green-main text-[#000] font-semibold rounded-[50%] text-xl tracking-widest hover:shadow-blue-md transition-all outline-none"
             >
               <Image
                 src={aiImage}
                 alt="Profile Picture"
                 quality={10}
                 priority
-                style={{ width: "40px", height: "40px", borderRadius: "50%" }}
+                style={{ width: "50px", height: "50px", borderRadius: "50%" }}
               />
             </button>
           </div>

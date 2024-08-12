@@ -137,7 +137,7 @@ export default function Navbar() {
         style={{
           boxShadow: "0 -4px 6px rgba(0, 0, 0, 0.1)",
         }}
-        className=" fixed bottom-0 p-2 w-full z-30 bg-white h-10 text-center text-gray-400 bg-white-500"
+        className="fixed bottom-0 p-2 w-full z-30 bg-white h-10 text-center text-gray-400 bg-white-500 hidden lg:block"
       >
         Copyright@ by wooriki
       </div>

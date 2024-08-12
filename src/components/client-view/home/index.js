@@ -48,7 +48,7 @@ export default function ClientHomeView({ data }) {
       icon: (
         <FaTwitter
           color="rgba(0, 204, 255, 0.3)"
-          className="w-[40px] h-[40px] "
+          className="w-[30px] h-[30px] "
         />
       ),
     },
@@ -57,7 +57,7 @@ export default function ClientHomeView({ data }) {
       icon: (
         <FaLinkedinIn
           color="rgba(0, 204, 255, 0.3)"
-          className="w-[40px] h-[40px] "
+          className="w-[30px] h-[30px] "
         />
       ),
     },
@@ -66,7 +66,7 @@ export default function ClientHomeView({ data }) {
       icon: (
         <FaInstagram
           color="rgba(0, 204, 255, 0.3)"
-          className="w-[40px] h-[40px] "
+          className="w-[30px] h-[30px] "
         />
       ),
     },
@@ -106,7 +106,7 @@ export default function ClientHomeView({ data }) {
             <p className="text-[#000] mt-4 mb-8 font-bold">
               {data && data.length ? data[0]?.summary : null}
             </p>
-            <motion.div className="flex gap-3 cursor-pointer">
+            <motion.div className="flex gap-3 cursor-pointer items-end">
               {socialIcons.map((item) => (
                 <motion.div
                   key={item.id}

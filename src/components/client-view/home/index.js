@@ -3,12 +3,7 @@
 import { useMemo, useRef } from "react";
 import AnimationWrapper from "../animation-wrapper";
 import { motion } from "framer-motion";
-import {
-  FaFacebookF,
-  FaLinkedinIn,
-  FaInstagram,
-  FaTwitter,
-} from "react-icons/fa";
+import { FaLinkedinIn, FaInstagram, FaTwitter } from "react-icons/fa";
 import { VscGithub } from "react-icons/vsc";
 import Image from "next/image";
 import aiImage from "../../../assets/ai-image.png";
@@ -82,14 +77,14 @@ export default function ClientHomeView({ data }) {
       <AnimationWrapper>
         <motion.div
           className={
-            "grid grid-flow-row sm:grid-flow-col grid-rows-2 md:grid-rows-1 sm:grid-cols-2 gap-8 py-6 sm:py-16"
+            "grid grid-flow-row sm:grid-flow-col grid-rows-2 md:grid-rows-1 sm:grid-cols-2 gap-8 py-6 sm:py-8"
           }
           variants={setVariants}
         >
           <div className="flex flex-col justify-center items-start row-start-2 sm:row-start-1">
-            <h1 className="mb-4 text-3xl lg:text-4xl xl:text-6xl font-medium leading-normal">
+            <h1 className="mb-4 text-2xl lg:text-3xl xl:text-5xl  font-medium leading-normal">
               {data && data.length
-                ? data[0]?.heading.split(" ").map((item, index) => (
+                ? data[0].heading.split(" ").map((item, index) => (
                     <span
                       key={index}
                       className={`${
@@ -97,8 +92,11 @@ export default function ClientHomeView({ data }) {
                           ? "text-gradient"
                           : "text-[#000]"
                       }`}
+                      style={{ lineHeight: "1.2" }}
                     >
-                      {item}{" "}
+                      {item}
+                      {item === "반갑습니다" ? <br /> : " "}
+                      {item === "끈기력으로" ? <br /> : " "}
                     </span>
                   ))
                 : null}

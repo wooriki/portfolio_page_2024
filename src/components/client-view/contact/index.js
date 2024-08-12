@@ -140,7 +140,8 @@ export default function ClientContactView() {
                   <button
                     disabled={!isValidForm()}
                     onClick={handleSendMessage}
-                    className=" mb-[440px] disabled:opacity-50 py-3 lg:py-4 px-12 lg:px-16 text-white-500 font-semibold rounded-lg text-2xl tracking-widest bg-blue-main outline-none"
+                    className=" mb-[440px] disabled:opacity-50 py-3 lg:py-4 px-12 lg:px-16 text-white-500 font-semibold rounded-lg text-md md:text-xl lg:text-2xl tracking-widest bg-blue-main outline-none"
+                    sm
                   >
                     Send Message
                   </button>

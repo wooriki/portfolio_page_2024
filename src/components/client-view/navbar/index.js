@@ -38,7 +38,7 @@ function CreateMenus({ activeLink, getMenuItems, setActiveLink }) {
       spy={true}
       smooth={true}
       duration={1000}
-      offset={-70}
+      offset={item.id === "contact" ? -200 : -70}
       onSetActive={() => setActiveLink(item.id)}
       className={`px-4 py-2 mx-2 cursor-pointer animation-hover inline-block relative
     ${
@@ -106,6 +106,7 @@ export default function Navbar() {
                   duration: 1500,
                   delay: 100,
                   smooth: true,
+                  offset: -200,
                 })
               }
               className="py-1 px-1 border-[2px] bg-[#fff]  border-purple-main   font-semibold rounded-[50%] tracking-widest hover:shadow-blue-md transition-all outline-none"
@@ -129,7 +130,6 @@ export default function Navbar() {
               activeLink={activeLink}
               getMenuItems={menuItems}
             />
-            <div>bottom</div>
           </ul>
         </div>
       </nav>

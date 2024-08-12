@@ -10,15 +10,7 @@ export default function ClientProjectView({ data }) {
 
   const router = useRouter();
 
-  let updatedData = [
-    ...data,
-    ...data,
-    ...data,
-    ...data,
-    ...data,
-    ...data,
-    ...data,
-  ];
+  let updatedData = [...data, ...data];
   return (
     <div
       className="max-w-screen-xl mt-24 mb-6 sm:mt-14 sm:mb-14 px-6 sm:px-8 lg:px-16 mx-auto"
@@ -30,7 +22,7 @@ export default function ClientProjectView({ data }) {
             {"My Projects".split(" ").map((item, index) => (
               <span
                 key={index}
-                className={`${index === 1 ? "text-green-main" : "text-[#000]"}`}
+                className={`${index === 1 ? "text-gradient" : "text-[#000]"}`}
               >
                 {item}{" "}
               </span>
@@ -42,28 +34,28 @@ export default function ClientProjectView({ data }) {
               cy={"50"}
               r="30"
               pathLength={"1"}
-              className="stroke-[#000]"
+              className="stroke-[rgba(241,14,14,0.7)]"
             />
             <motion.circle
               cx={"50"}
               cy={"50"}
               r="30"
               pathLength={"1"}
-              className="stroke-green-main"
+              className="stroke-blue-main"
               style={{ pathLength: scrollXProgress }}
             />
           </svg>
         </div>
       </AnimationWrapper>
       <AnimationWrapper>
-        <ul className="project-wrapper" ref={containerRef}>
+        <ul className="project-wrapper " ref={containerRef}>
           {updatedData && updatedData.length
             ? updatedData.map((item, index) => (
                 <li
                   key={index}
-                  className="w-full flex items-stretch cursor-pointer"
+                  className="w-full flex items-stretch cursor-pointer "
                 >
-                  <div className="border-2 w-full relative border-green-main transition-all rounded-lg flex flex-col">
+                  <div className="border-2 w-full relative border-blue-main transition-all rounded-lg flex flex-col">
                     <div className="flex p-4 flex-col xl:flex-row w-full items-stretch xl:items-center">
                       <div className="flex order-2 xl:order-1">
                         <div className="flex flex-col">
@@ -81,7 +73,7 @@ export default function ClientProjectView({ data }) {
                                   className="w-full flex justify-start items-center"
                                   key={index}
                                 >
-                                  <button className="whitespace-nowrap text-ellipsis overflow-hidden py-3 w-[120px]  px-6 border-[2px] border-green-main bg-[#fff] text-[#000] font-semibold rounded-lg text-xs tracking-widest hover:shadow-green-main transition-all outline-none">
+                                  <button className="whitespace-nowrap text-ellipsis overflow-hidden py-3 w-[120px]  px-6 border-[2px] border-blue-main bg-[#fff] text-[#000] font-semibold rounded-lg text-xs tracking-widest hover:shadow-green-main transition-all outline-none">
                                     {techItem}
                                   </button>
                                 </div>
@@ -93,13 +85,13 @@ export default function ClientProjectView({ data }) {
                     <div className="absolute w-full bottom-2 justify-center flex gap-2">
                       <button
                         onClick={() => router.push(item.website)}
-                        className="p-2 text-white-500 font-semibold text-[14px] tracking-widest rounded-lg bg-green-main transition-all outline-none"
+                        className="p-2 text-white-500 font-semibold text-[14px] tracking-widest rounded-lg bg-blue-main transition-all outline-none"
                       >
                         Website
                       </button>
                       <button
                         onClick={() => router.push(item.github)}
-                        className="p-2 text-white-500 font-semibold text-[14px] tracking-widest rounded-lg bg-green-main transition-all outline-none"
+                        className="p-2 text-white-500 font-semibold text-[14px] tracking-widest rounded-lg bg-blue-main transition-all outline-none"
                       >
                         Github
                       </button>

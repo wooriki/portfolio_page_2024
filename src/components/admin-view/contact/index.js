@@ -7,7 +7,7 @@ export default function AdminContactView({ data }) {
         ? data.map((item, index) => (
             <div className="p-5 border" key={index}>
               <p>{item.name}</p>
-              <p>{item.email}</p>
+              <p>{item.cellphone}</p>
               <p>{item.message}</p>
             </div>
           ))

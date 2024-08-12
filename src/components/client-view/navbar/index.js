@@ -38,6 +38,7 @@ function CreateMenus({ activeLink, getMenuItems, setActiveLink }) {
       spy={true}
       smooth={true}
       duration={1000}
+      offset={-70}
       onSetActive={() => setActiveLink(item.id)}
       className={`px-4 py-2 mx-2 cursor-pointer animation-hover inline-block relative
     ${
@@ -128,9 +129,18 @@ export default function Navbar() {
               activeLink={activeLink}
               getMenuItems={menuItems}
             />
+            <div>bottom</div>
           </ul>
         </div>
       </nav>
+      <div
+        style={{
+          boxShadow: "0 -4px 6px rgba(0, 0, 0, 0.1)",
+        }}
+        className=" fixed bottom-0 p-2 w-full z-30 bg-white h-10 text-center text-gray-400 bg-white-500"
+      >
+        Copyright@ by wooriki
+      </div>
     </>
   );
 }

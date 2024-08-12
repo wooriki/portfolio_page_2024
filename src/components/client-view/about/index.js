@@ -56,7 +56,7 @@ export default function ClientAboutView({ data }) {
       id="about"
     >
       <div className="w-full flex">
-        <AnimationWrapper className="rounded-lg w-full grid-flow-row grid grid-cols-1 sm:grid-cols-3 py-9 divide-y-2 sm:divide-y-0 sm:divide-x-2 divide-green-main bg-ehite-500 z-10">
+        <AnimationWrapper className="rounded-lg w-full grid-flow-row grid grid-cols-1 sm:grid-cols-3 py-9 divide-y-2 sm:divide-y-0 sm:divide-x-2 divide-blue-main bg-ehite-500 z-10">
           {aboutDataInfo.map((infoItem, index) => (
             <motion.div
               className={`flex items-center justify-start
@@ -74,7 +74,7 @@ export default function ClientAboutView({ data }) {
             >
               <div className="flex m-0 w-40 sm:w-auto">
                 <div className="flex flex-col">
-                  <p className="text-[50px] text-green-main font-bold">
+                  <p className="text-[50px] text-blue-main font-bold">
                     {infoItem.value}+
                   </p>
                   <p className="text-[25px] font-bold text-[#000000]">
@@ -92,7 +92,7 @@ export default function ClientAboutView({ data }) {
             {headingText.split(" ").map((item, index) => (
               <span
                 key={index}
-                className={`${index === 6 ? "text-green-main" : "text-[#000]"}`}
+                className={`${index === 6 ? "text-gradient" : "text-[#000]"}`}
               >
                 {item}{" "}
               </span>
@@ -124,7 +124,7 @@ export default function ClientAboutView({ data }) {
                 className="w-full flex justify-center items-center"
                 variants={skillItemVariant}
               >
-                <button className="whitespace-nowrap text-ellipsis overflow-hidden py-3 w-[160px] px-6 border-[2px] border-green-main bg-[#fff] text-[#000] font-semibold rounded-lg text-xl tracking-widest hover:shadow-green-main transition-all outline-none">
+                <button className="whitespace-nowrap text-ellipsis overflow-hidden py-3 w-[160px] px-6 border-[2px] border-blue-main bg-[#fff] text-[#000] font-semibold rounded-lg text-xl tracking-widest hover:shadow-blue-main transition-all outline-none">
                   {skill}
                 </button>
               </motion.div>

@@ -54,6 +54,10 @@ module.exports = {
         "blue-to-purple": "linear-gradient(to right, #0000FF, #800080)",
         "green-to-purple": "linear-gradient(to right, #0DB760, #800080)",
       },
+      boxShadow: {
+        "up-md": "0 -4px 6px rgba(0, 0, 0, 0.1)",
+        "up-lg": "0 -8px 12px rgba(0, 0, 0, 0.1)",
+      },
     },
   },
   variants: {

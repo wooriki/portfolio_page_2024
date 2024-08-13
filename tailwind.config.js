@@ -57,6 +57,7 @@ module.exports = {
       boxShadow: {
         "up-md": "0 -4px 6px rgba(0, 0, 0, 0.1)",
         "up-lg": "0 -8px 12px rgba(0, 0, 0, 0.1)",
+        "blue-main": "0 4px 6px rgba(0, 0, 255, 0.025)",
       },
     },
   },

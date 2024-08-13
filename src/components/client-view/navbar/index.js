@@ -43,7 +43,7 @@ function CreateMenus({ activeLink, getMenuItems, setActiveLink }) {
       className={`px-4 py-2 mx-2 cursor-pointer animation-hover inline-block relative
     ${
       activeLink === item.id
-        ? "text-blue-main animation-active shadow-blue-main"
+        ? "text-blue-main animation-active shadow-md rounded-md"
         : "text-[#000] font-bold hover:text-blue-main"
     }
     `}
@@ -73,7 +73,7 @@ export default function Navbar() {
     <>
       <header
         className={`fixed top-0 w-full z-30 bg-white-500 transition-all ${
-          scrollActive ? "shadow-md pt-0" : "pt-4"
+          scrollActive ? "shadow-md pt-0 " : "pt-4"
         }`}
       >
         <nav className="max-w-screen-xl px-6 sm:px-8 lg:px-16 mx-auto flex justify-between items-center py-3 sm:py-4">

@@ -76,11 +76,10 @@ export default function Navbar() {
           scrollActive ? "shadow-md pt-0" : "pt-4"
         }`}
       >
-        <nav className="max-w-screen-xl px-6 sm:px-8 lg:px-16 mx-auto grid grid-flow-col py-3 sm:py-4">
-          <div className="col-start-1 col-end-2 flex items-center">
+        <nav className="max-w-screen-xl px-6 sm:px-8 lg:px-16 mx-auto flex justify-between items-center py-3 sm:py-4">
+          <div className="flex items-center">
             <div className="cursor-pointer flex font-bold items-center text-[20px] text-gradient">
               <div className="w-[40px] h-[40px]">
-                {/* <span className="text-[#fff] text-[25px] font-bold">P</span> */}
                 <Image
                   src={logoImage}
                   alt="Profile Picture"
@@ -92,14 +91,14 @@ export default function Navbar() {
               ortfolio
             </div>
           </div>
-          <ul className="hidden lg:flex col-start-4 col-end-8 text-[#000] items-center">
+          <ul className="hidden lg:flex text-[#000] items-center">
             <CreateMenus
               setActiveLink={setActiveLink}
               activeLink={activeLink}
               getMenuItems={menuItems}
             />
           </ul>
-          <div className="col-start-10 col-end-12 font-medium flex justify-center items-center">
+          <div className="font-medium flex justify-center items-center">
             <button
               onClick={() =>
                 scroller.scrollTo("contact", {

@@ -7,19 +7,19 @@ const controls = [
     name: "degree",
     placeholder: "Degree Name",
     type: "text",
-    label: "Enter Degree Name",
+    label: "학사/학위/등급",
   },
   {
     name: "year",
     placeholder: "Year",
     type: "text",
-    label: "Year",
+    label: "기간",
   },
   {
     name: "college",
     placeholder: "College Name",
     type: "text",
-    label: "Enter College Name",
+    label: "대학명/교육기관명",
   },
 ];
 
@@ -37,7 +37,7 @@ export default function AdminEducationView({
             ? data.map((item) => (
                 <div
                   key={item._id}
-                  className="flex flex-col gap-4 border p-4 border-green-main"
+                  className="flex flex-col gap-4 border p-4 border-blue-main"
                 >
                   <p>{item.degree}</p>
                   <p>{item.college}</p>
@@ -53,9 +53,9 @@ export default function AdminEducationView({
         />
         <button
           onClick={() => handleSaveData("education")}
-          className="mt-[10px] border border-green-main p-4 font-bold text-[16px]"
+          className="mt-[10px] border border-blue-main p-4 font-bold text-[16px]"
         >
-          Add Info
+          저장하기
         </button>
       </div>
     </div>

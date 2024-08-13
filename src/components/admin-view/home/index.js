@@ -5,15 +5,15 @@ import FormControls from "../form-controls";
 const controls = [
   {
     name: "heading",
-    placeholder: "Enter heading text",
+    placeholder: "머릿말",
     type: "text",
-    label: "Enter heading text",
+    label: "머릿말",
   },
   {
     name: "summary",
-    placeholder: "Enter Career summary",
+    placeholder: "보조 문구",
     type: "text",
-    label: "Enter Career summary",
+    label: "보조 문구",
   },
 ];
 export default function AdminHomeView({
@@ -31,9 +31,9 @@ export default function AdminHomeView({
         />
         <button
           onClick={() => handleSaveData("home")}
-          className="mt-[10px] border border-green-main p-4 font-bold text-[16px]"
+          className="mt-[10px] border border-blue-main p-4 font-bold text-[16px]"
         >
-          Add Info
+          저장하기
         </button>
       </div>
     </div>

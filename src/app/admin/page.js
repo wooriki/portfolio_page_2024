@@ -98,8 +98,8 @@ export default function AdminView() {
       component: (
         <AdminExperienceView
           formData={experienceViewFormData}
-          handleSaveData={handleSaveData}
           setFormData={setExperienceViewFormData}
+          handleSaveData={handleSaveData}
           data={allData?.experience}
         />
       ),
@@ -110,8 +110,8 @@ export default function AdminView() {
       component: (
         <AdminEducationView
           formData={educationViewFormData}
-          handleSaveData={handleSaveData}
           setFormData={setEducationViewFormData}
+          handleSaveData={handleSaveData}
           data={allData?.education}
         />
       ),
@@ -122,8 +122,8 @@ export default function AdminView() {
       component: (
         <AdminProjectView
           formData={projectViewFormData}
-          handleSaveData={handleSaveData}
           setFormData={setProjectViewFormData}
+          handleSaveData={handleSaveData}
           data={allData?.project}
         />
       ),
@@ -201,6 +201,7 @@ export default function AdminView() {
   useEffect(() => {
     setAuthUser(JSON.stringify(sessionStorage.getItem("authUser")));
   }, []);
+
   async function handleLogin() {
     const res = await login(loginFormData);
     console.log("res", res);

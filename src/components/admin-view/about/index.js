@@ -13,13 +13,13 @@ const controls = [
     name: "noofprojects",
     placeholder: "No of projects",
     type: "text",
-    label: "Enter no of projects",
+    label: "프로젝트 개수",
   },
   {
     name: "yearofexperience",
     placeholder: "No of experience",
     type: "text",
-    label: "Enter no of experience",
+    label: "경력",
   },
   {
     name: "noofclients",
@@ -31,7 +31,7 @@ const controls = [
     name: "skills",
     placeholder: "skills",
     type: "text",
-    label: "Skills",
+    label: "기술 이력",
   },
 ];
 
@@ -50,9 +50,9 @@ export default function AdminAboutView({
         />
         <button
           onClick={() => handleSaveData("about")}
-          className="mt-[10px] border border-green-main p-4 font-bold text-[16px]"
+          className="mt-[10px] border border-blue-main p-4 font-bold text-[16px]"
         >
-          Add Info
+          저장하기
         </button>
       </div>
     </div>

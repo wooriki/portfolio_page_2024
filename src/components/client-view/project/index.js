@@ -73,7 +73,7 @@ export default function ClientProjectView({ data }) {
                                   className="w-full flex justify-start items-center"
                                   key={index}
                                 >
-                                  <button className="whitespace-nowrap text-ellipsis overflow-hidden py-3 w-[120px]  px-6 border-[2px] border-blue-main bg-[#fff] text-[#000] font-semibold rounded-lg text-xs tracking-widest hover:shadow-green-main transition-all outline-none">
+                                  <button className="whitespace-nowrap text-ellipsis overflow-hidden py-3 w-[120px]  px-6 border-[2px] border-blue-main bg-[#fff] text-[#000] font-semibold rounded-lg text-xs tracking-widest hover:shadow-blue-main transition-all outline-none">
                                     {techItem}
                                   </button>
                                 </div>

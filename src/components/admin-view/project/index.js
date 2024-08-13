@@ -7,25 +7,25 @@ const controls = [
     name: "name",
     placeholder: "Project Name",
     type: "text",
-    label: "Project Name",
+    label: "프로젝트명",
   },
   {
     name: "technologies",
     placeholder: "Enter Technologies",
     type: "text",
-    label: "Enter Technologies",
+    label: "사용 기술/스택",
   },
   {
     name: "website",
     placeholder: "Website",
     type: "text",
-    label: "Website",
+    label: "웹사이트 주소",
   },
   {
     name: "github",
     placeholder: "Github",
     type: "text",
-    label: "github",
+    label: "깃헙 주소",
   },
 ];
 
@@ -43,7 +43,7 @@ export default function AdminProjectView({
             ? data.map((item) => (
                 <div
                   key={item._id}
-                  className="flex flex-col gap-4 border p-4 border-green-main"
+                  className="flex flex-col gap-4 border p-4 border-blue-main"
                 >
                   <p>{item.name}</p>
                   <p>{item.technologies}</p>
@@ -60,9 +60,9 @@ export default function AdminProjectView({
         />
         <button
           onClick={() => handleSaveData("project")}
-          className="mt-[10px] border border-green-main p-4 font-bold text-[16px]"
+          className="mt-[10px] border border-blue-main p-4 font-bold text-[16px]"
         >
-          Add Info
+          저장하기
         </button>
       </div>
     </div>

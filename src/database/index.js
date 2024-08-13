@@ -1,12 +1,22 @@
 import mongoose from "mongoose";
+let cachedClient = null;
 
 export default async function connectToDB() {
+  if (cachedClient) {
+    return cachedClient;
+  }
+
   try {
-    await mongoose.connect(
-      "mongodb+srv://dlsltlvmfl:uDohRetGNU41wUQ2@cluster0.kbqmjov.mongodb.net/"
-    );
+    const mongoUri = process.env.MONGODB_URI;
+    await mongoose.connect(mongoUri, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    });
+    cachedClient = mongoose;
     console.log("Database connected successfully");
+    return cachedClient;
   } catch (e) {
-    console.log(e);
+    console.error("Database connection failed", e);
+    throw new Error("Database connection failed");
   }
 }

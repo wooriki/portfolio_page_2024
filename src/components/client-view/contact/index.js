@@ -70,7 +70,7 @@ export default function ClientContactView() {
       className="max-w-screen-xl mt-100 mb-6 sm:mt-14 sm:mb-14 px-6 sm:px-8 lg:px-16 mx-auto "
     >
       <div className="mt-100">
-        <AnimationWrapper className={"py-6 mt-[150px]  mb-[50px]"}>
+        <AnimationWrapper className={"py-6 mt-[150px] mb-[50px]"}>
           <div className="flex flex-col justify-center items-center row-start-2 sm:row-start-1">
             <h1 className="leading-[70px] mb-4 text-3xl lg:text-4xl xl:text-5xl font-medium">
               {"Contact Me".split(" ").map((item, index) => (
@@ -98,7 +98,7 @@ export default function ClientContactView() {
                         <textarea
                           id={controlItem.name}
                           name={controlItem.name}
-                          value={formData[controlItem.name] || ""}
+                          value={formData[controlItem.name]}
                           onChange={(e) =>
                             setFormData({
                               ...formData,
@@ -106,7 +106,7 @@ export default function ClientContactView() {
                             })
                           }
                           className="w-full border-blue-main border-[2px] bg-[#ffffff] rounded  h-32 text-base outline-none text-[#000000] py-1 px-3 resize-none leading-6"
-                        ></textarea>
+                        />
                       </div>
                     </div>
                   ) : (

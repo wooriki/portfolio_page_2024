@@ -1,5 +1,5 @@
 "use client";
-import { useMemo, useRef } from "react";
+import { useRef } from "react";
 import AnimationWrapper from "../animation-wrapper";
 import { motion, useScroll } from "framer-motion";
 import { useRouter } from "next/navigation";
@@ -10,13 +10,13 @@ export default function ClientProjectView({ data }) {
 
   const router = useRouter();
 
-  let updatedData = [...data, ...data];
+  let updatedData = [...data, ...data, ...data];
   return (
     <div
       className="max-w-screen-xl mt-24 mb-6 sm:mt-14 sm:mb-14 px-6 sm:px-8 lg:px-16 mx-auto"
       id="project"
     >
-      <AnimationWrapper className={"py-6 sm:py-16"}>
+      <AnimationWrapper className="py-6 sm:py-16">
         <div className="flex flex-col justify-center items-center row-start-2 sm:row-start-1">
           <h1 className="leading-[70px] mb-4 text-3xl lg:text-4xl xl:text-5xl font-medium">
             {"My Projects".split(" ").map((item, index) => (
@@ -67,7 +67,7 @@ export default function ClientProjectView({ data }) {
                           </p>
                           <div className="grid gap-2 mt-5 grid-cols-2 h-full max-h-[200px] w-full">
                             {item?.technologies
-                              .split(",")
+                              .split("," || " ")
                               .map((techItem, index) => (
                                 <div
                                   className="w-full flex justify-start items-center"

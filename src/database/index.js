@@ -1,20 +1,23 @@
 import mongoose from "mongoose";
-let cachedClient = null;
+
+let cachedConnection = null;
 
 export default async function connectToDB() {
-  if (cachedClient) {
-    return cachedClient;
+  if (cachedConnection) {
+    return cachedConnection;
   }
 
   try {
     const mongoUri = process.env.MONGODB_URI;
-    await mongoose.connect(mongoUri, {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-    });
-    cachedClient = mongoose;
+    if (!mongoUri) {
+      throw new Error("MONGODB_URI is not defined in environment variables");
+    }
+
+    const connection = await mongoose.connect(mongoUri);
+    cachedConnection = connection;
     console.log("Database connected successfully");
-    return cachedClient;
+
+    return cachedConnection;
   } catch (e) {
     console.error("Database connection failed", e);
     throw new Error("Database connection failed");

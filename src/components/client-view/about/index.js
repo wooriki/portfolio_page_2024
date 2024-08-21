@@ -124,7 +124,7 @@ export default function ClientAboutView({ data }) {
                 className="w-full flex justify-center items-center"
                 variants={skillItemVariant}
               >
-                <button className="whitespace-nowrap text-ellipsis overflow-hidden py-3 w-[160px] px-6 border-[2px] border-blue-main bg-[#fff] text-[#000] font-semibold rounded-lg text-xl tracking-widest hover:shadow-blue-main transition-all outline-none">
+                <button className="whitespace-nowrap text-ellipsis overflow-hidden py-3 w-[160px] px-6 border-[2px] border-blue-main bg-[#fff] text-[#000] font-semibold rounded-lg text-lg tracking-widest hover:shadow-blue-main transition-all outline-none">
                   {skill}
                 </button>
               </motion.div>

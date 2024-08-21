@@ -187,7 +187,6 @@ export default function AdminView() {
   }
 
   useEffect(() => {
-    setAuthUser(false);
     extractAllDatas();
   }, [currentSelectedTab]);
 
@@ -200,7 +199,8 @@ export default function AdminView() {
   }
 
   useEffect(() => {
-    setAuthUser(JSON.stringify(sessionStorage.getItem("authUser")));
+    const storedAuthUser = JSON.parse(sessionStorage.getItem("authUser"));
+    setAuthUser(storedAuthUser || false);
   }, []);
 
   async function handleLogin() {

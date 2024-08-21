@@ -1,8 +1,8 @@
 // pages/api/home/add.js
 import connectToDB from "@/database";
+import { runMiddleware } from "@/lib/cors-middleware";
 import Home from "@/models/Home";
 import { NextResponse } from "next/server";
-import { runMiddleware } from "../../../../../.next/lib/cors-middleware";
 
 export const dynamic = "force-dynamic";
 

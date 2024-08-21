@@ -1,7 +1,7 @@
 import connectToDB from "@/database";
 import About from "@/models/About";
 import { NextResponse } from "next/server";
-import { runMiddleware } from "../../../../../lib/cors-middleware";
+import { runMiddleware } from "../../../../../.next/lib/cors-middleware";
 
 export const dynamic = "force-dynamic";
 

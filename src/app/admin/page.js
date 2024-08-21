@@ -187,6 +187,7 @@ export default function AdminView() {
   }
 
   useEffect(() => {
+    setAuthUser(false);
     extractAllDatas();
   }, [currentSelectedTab]);
 

@@ -124,7 +124,7 @@ export default function Navbar() {
                 alt="Profile Picture"
                 quality={10}
                 priority
-                className=" transition-opacity"
+                className="transition-opacity"
                 style={{ width: "50px", height: "50px", borderRadius: "50%" }}
               />
             </button>

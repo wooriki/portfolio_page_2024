@@ -1,10 +1,13 @@
 import connectToDB from "@/database";
 import About from "@/models/About";
 import { NextResponse } from "next/server";
+import { runMiddleware } from "../../../../../lib/cors-middleware";
 
 export const dynamic = "force-dynamic";
 
-export async function POST(req) {
+export async function POST(req, res) {
+  await runMiddleware(req, res, cors);
+
   try {
     await connectToDB();
     const extractData = await req.json();

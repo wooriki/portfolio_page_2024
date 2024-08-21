@@ -1,10 +1,15 @@
+// pages/api/home/add.js
 import connectToDB from "@/database";
 import Home from "@/models/Home";
 import { NextResponse } from "next/server";
+import { runMiddleware } from "../../../../../lib/cors-middleware";
 
 export const dynamic = "force-dynamic";
 
 export async function POST(req) {
+  // CORS 미들웨어 실행
+  await runMiddleware(req, null, cors);
+
   try {
     await connectToDB();
     const extractData = await req.json();

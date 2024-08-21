@@ -15,6 +15,7 @@
     "@mui/lab": "^5.0.0-alpha.173",
     "@mui/material": "^5.16.6",
     "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
     "framer-motion": "^11.3.20",
     "mongoose": "^8.5.2",
     "next": "14.2.5",

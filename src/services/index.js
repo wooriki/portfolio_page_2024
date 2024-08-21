@@ -1,15 +1,12 @@
 export async function addData(currentTab, formData) {
   try {
-    const response = fetch(
-      `${process.env.NEXT_PUBLIC_API_URL}/${currentTab}/add`,
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      }
-    );
+    const response = fetch(`api/${currentTab}/add`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    });
 
     const result = await response.json();
 
@@ -21,12 +18,9 @@ export async function addData(currentTab, formData) {
 
 export async function getData(currentTab) {
   try {
-    const response = fetch(
-      `${process.env.NEXT_PUBLIC_API_URL}/${currentTab}/add`,
-      {
-        method: "GET",
-      }
-    );
+    const response = await fetch(`/api/${currentTab}`, {
+      method: "GET",
+    });
 
     const result = await response.json();
 

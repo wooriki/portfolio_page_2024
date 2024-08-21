@@ -10,7 +10,7 @@ export default function ClientProjectView({ data }) {
 
   const router = useRouter();
 
-  let updatedData = [...data, ...data, ...data];
+  let updatedData = [...data];
   return (
     <div
       className="max-w-screen-xl mt-24 mb-6 sm:mt-14 sm:mb-14 px-6 sm:px-8 lg:px-16 mx-auto"

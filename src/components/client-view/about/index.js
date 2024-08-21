@@ -98,7 +98,9 @@ export default function ClientAboutView({ data }) {
               </span>
             ))}
           </h1>
-          <p className="text-[#000000] mt-4 mb-8 font-bold">{data?.aboutme}</p>
+          <p className="text-[#000000] mt-4 mb-8 font-extrabold">
+            {data?.aboutme}
+          </p>
         </div>
       </AnimationWrapper>
       <div className="grid grid-flow-row sm:grid-flow-col grid-cols-1 sm:grid-cols-2 gap-8">
@@ -124,7 +126,7 @@ export default function ClientAboutView({ data }) {
                 className="w-full flex justify-center items-center"
                 variants={skillItemVariant}
               >
-                <button className="whitespace-nowrap text-ellipsis overflow-hidden py-3 w-[160px] px-6 border-[2px] border-blue-main bg-[#fff] text-[#000] font-semibold rounded-lg text-lg tracking-widest hover:shadow-blue-main transition-all outline-none">
+                <button className="whitespace-nowrap text-ellipsis overflow-hidden py-3 w-[160px] px-6 border-[2px] border-blue-main bg-[#fff] text-[#000] font-bold rounded-lg text-lg tracking-widest hover:shadow-blue-main transition-all outline-none">
                   {skill}
                 </button>
               </motion.div>

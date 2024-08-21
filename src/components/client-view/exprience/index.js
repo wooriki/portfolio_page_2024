@@ -53,7 +53,7 @@ export default function ClientExperienceAndEducationView({
                           </TimelineSeparator>
                           <TimelineContent>
                             <div className="border-[2px] p-4 rounded-[8px] border-blue-main mt-[14px] ml-[16px]">
-                              <p className="font-bold">
+                              <p className="font-extrabold">
                                 {experienceItem.duration}
                               </p>
                               <h3 className="font-extrabold mt-2">
@@ -63,7 +63,7 @@ export default function ClientExperienceAndEducationView({
                               <p className="font-extrabold mt-2">
                                 {experienceItem.position}
                               </p>
-                              <p className="font-extralight mt-2">
+                              <p className="font-light mt-2">
                                 {experienceItem.jobprofile}
                               </p>
                             </div>
@@ -106,7 +106,9 @@ export default function ClientExperienceAndEducationView({
                           </TimelineSeparator>
                           <TimelineContent>
                             <div className="border-[2px] p-4 rounded-[8px] border-blue-main mt-[14px] ml-[16px]">
-                              <p className="font-bold">{educationItem.year}</p>
+                              <p className="font-extrabold">
+                                {educationItem.year}
+                              </p>
                               <h3 className="font-extrabold mt-2">
                                 {educationItem.college}
                               </h3>

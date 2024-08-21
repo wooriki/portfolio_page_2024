@@ -1,11 +1,13 @@
 // lib/cors-middleware.js
 import Cors from "cors";
 
+// Initialize CORS middleware
 const cors = Cors({
-  methods: ["GET", "POST", "PUT", "DELETE"],
-  origin: "*", // 모든 출처에서의 요청을 허용합니다.
+  methods: ["GET", "HEAD", "PUT", "PATCH", "POST", "DELETE"],
+  origin: "*", // Adjust this to specific origins if needed
 });
 
+// Helper to run middleware
 export function runMiddleware(req, res, fn) {
   return new Promise((resolve, reject) => {
     fn(req, res, (result) => {
@@ -16,5 +18,3 @@ export function runMiddleware(req, res, fn) {
     });
   });
 }
-
-export default cors;

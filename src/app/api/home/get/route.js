@@ -1,35 +1,31 @@
 import connectToDB from "@/database";
-import { runMiddleware } from "@/lib/cors-middleware";
 import Home from "@/models/Home";
 import { NextResponse } from "next/server";
 
 export const dynamic = "force-dynamic";
 
-// 데이터를 가져오는 GET 요청 처리
 export async function GET(req) {
-  await runMiddleware(req, null, cors);
-
   try {
-    await connectToDB(); // MongoDB에 연결
-    const extractData = await Home.find({}); // 데이터를 MongoDB에서 가져옴
+    await connectToDB();
+    const extractData = await Home.find({});
 
     if (extractData) {
       return NextResponse.json({
         success: true,
         data: extractData,
-        message: "데이터를 성공적으로 가져왔습니다.",
       });
     } else {
       return NextResponse.json({
         success: false,
-        message: "데이터가 존재하지 않습니다.",
+        message: "Something went wrong !Please try again",
       });
     }
   } catch (e) {
-    console.error(e);
+    console.log(e);
+
     return NextResponse.json({
       success: false,
-      message: "서버에서 오류가 발생했습니다.",
+      message: "Something went wrong !Please try again",
     });
   }
 }

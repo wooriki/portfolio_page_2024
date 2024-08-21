@@ -43,8 +43,8 @@ function CreateMenus({ activeLink, getMenuItems, setActiveLink }) {
       className={`px-4 py-2 mx-2 cursor-pointer animation-hover inline-block relative
     ${
       activeLink === item.id
-        ? "text-blue-main animation-active shadow-md rounded-md"
-        : "text-[#000] font-bold hover:text-blue-main"
+        ? "text-blue-main animation-active shadow-md rounded-md font-semibold"
+        : "text-[#000] font-semibold hover:text-blue-main"
     }
     `}
     >
@@ -112,7 +112,7 @@ export default function Navbar() {
               getMenuItems={menuItems}
             />
           </ul>
-          <div className="font-medium relative">
+          <div className="font-semibold relative">
             <button
               onClick={handleButtonClick}
               onMouseEnter={toggleTooltip}

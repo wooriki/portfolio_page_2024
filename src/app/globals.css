@@ -1,13 +1,17 @@
 /* purgecss start ignore */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap");
 
 @tailwind base;
 @tailwind components;
 
 html {
-  font-family: "Rubik", sans-serif;
+  font-family: "Inter", "Rubik", sans-serif;
 }
 body {
   background: bg-white-500;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 p {
   color: #000000;

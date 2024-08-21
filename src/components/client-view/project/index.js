@@ -18,7 +18,7 @@ export default function ClientProjectView({ data }) {
     >
       <AnimationWrapper className="py-6 sm:py-16">
         <div className="flex flex-col justify-center items-center row-start-2 sm:row-start-1">
-          <h1 className="leading-[70px] mb-4 text-3xl lg:text-4xl xl:text-5xl font-medium">
+          <h1 className="leading-[70px] mb-4 text-3xl lg:text-4xl xl:text-5xl font-semibold">
             {"My Projects".split(" ").map((item, index) => (
               <span
                 key={index}

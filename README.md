@@ -33,7 +33,7 @@
   - **Next.js Image 컴포넌트:** 최적화된 이미지 로딩과 크기 조정을 지원하는 컴포넌트입니다.
 
 - **데이터베이스:**
-  - **Mongo DB** SON과 유사한 문서 기반의 데이터베이스로, 유연한 스키마를 지원하며 수평 확장성으로 대규모 데이터를 효율적으로 처리할 수 있습니다.
+  - **Mongo DB:** JSON과 유사한 문서 기반의 데이터베이스로, 유연한 스키마를 지원하며 수평 확장성으로 대규모 데이터를 효율적으로 처리할 수 있습니다.
     <br/>NoSQL 데이터베이스로, 데이터 구조의 변동성이 큰 애플리케이션에 적합하며, 빠른 쿼리 성능과 높은 가용성을 제공합니다.
 
 ## Captures
@@ -46,8 +46,8 @@
 <img width="2168" alt="스크린샷 2024-08-21 오후 9 30 12" src="https://github.com/user-attachments/assets/67d54ba1-6991-4f4b-b71e-81096d915194">
 <img width="2162" alt="스크린샷 2024-08-21 오후 9 30 37" src="https://github.com/user-attachments/assets/ba6e1a29-accc-44bf-b95f-6430f4dcb363">
 
-
 ### 반응형
+
 <img width="607" alt="스크린샷 2024-08-21 오후 9 31 03" src="https://github.com/user-attachments/assets/69b8b2e3-18ee-495b-b382-ae543521d1ed">
 <img width="615" alt="스크린샷 2024-08-21 오후 9 31 21" src="https://github.com/user-attachments/assets/e102c694-bf1c-4033-9fd5-c8e31ae5bd0b">
 <img width="621" alt="스크린샷 2024-08-21 오후 9 31 40" src="https://github.com/user-attachments/assets/2ddeb003-ee79-4888-a432-25b3eada38b5">

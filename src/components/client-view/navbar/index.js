@@ -56,6 +56,7 @@ function CreateMenus({ activeLink, getMenuItems, setActiveLink }) {
 export default function Navbar() {
   const [activeLink, setActiveLink] = useState("home");
   const [scrollActive, setScrollActive] = useState(false);
+  const [showTooltip, setShowTooltip] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -68,6 +69,19 @@ export default function Navbar() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  const handleButtonClick = () => {
+    scroller.scrollTo("contact", {
+      duration: 1500,
+      delay: 100,
+      smooth: true,
+      offset: -200,
+    });
+  };
+
+  const toggleTooltip = () => {
+    setShowTooltip((prev) => !prev);
+  };
 
   return (
     <>
@@ -98,26 +112,27 @@ export default function Navbar() {
               getMenuItems={menuItems}
             />
           </ul>
-          <div className="font-medium flex justify-center items-center">
+          <div className="font-medium relative">
             <button
-              onClick={() =>
-                scroller.scrollTo("contact", {
-                  duration: 1500,
-                  delay: 100,
-                  smooth: true,
-                  offset: -200,
-                })
-              }
-              className="py-1 px-1 border-[2px] bg-[#fff]  border-purple-main   font-semibold rounded-[50%] tracking-widest hover:shadow-blue-md transition-all outline-none"
+              onClick={handleButtonClick}
+              onMouseEnter={toggleTooltip}
+              onMouseLeave={toggleTooltip}
+              className="py-1 px-1 border-[2px] bg-[#fff] border-purple-main font-semibold rounded-[50%] tracking-widest hover:shadow-blue-md transition-all outline-none relative duration-100 hover:opacity-30"
             >
               <Image
                 src={aiImage}
                 alt="Profile Picture"
                 quality={10}
                 priority
+                className=" transition-opacity"
                 style={{ width: "50px", height: "50px", borderRadius: "50%" }}
               />
             </button>
+            {showTooltip && (
+              <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 mb-2 text-white text-sm px-2 py-1 font-extrabold whitespace-nowrap">
+                Contact me
+              </div>
+            )}
           </div>
         </nav>
       </header>

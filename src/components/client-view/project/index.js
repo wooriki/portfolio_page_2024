@@ -84,8 +84,15 @@ export default function ClientProjectView({ data }) {
                     </div>
                     <div className="absolute w-full bottom-2 justify-center flex gap-2">
                       <button
-                        onClick={() => router.push(item.website)}
-                        className="p-2 text-white-500 font-semibold text-[14px] tracking-widest rounded-lg bg-blue-main transition-all outline-none"
+                        onClick={() =>
+                          item.website && router.push(item.website)
+                        }
+                        disabled={!item.website}
+                        className={`p-2 font-semibold text-[14px] tracking-widest rounded-lg transition-all outline-none ${
+                          item.website
+                            ? "bg-blue-main text-white-500"
+                            : "bg-blue-main text-gray-300 cursor-not-allowed opacity-30"
+                        }`}
                       >
                         Website
                       </button>

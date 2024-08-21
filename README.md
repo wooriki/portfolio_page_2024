@@ -1,4 +1,4 @@
-# PortfolioPage
+# Portfolio Page
 
 ### Deployment
 
@@ -26,7 +26,7 @@
 
   - **Next.js:** React 기반의 서버 사이드 렌더링(SSR) 및 정적 사이트 생성(SSG)을 위한 프레임워크입니다.
   - **React:** 효율적인 UI구성과 빠른 렌더링을 지원하는 컴포넌트 기반 JavaScript 라이브러리입니다.
-  - **Framer-motion:** 자연스러운 애니메이션과 트랜지션을 간편하게 구현할 수 있는 라이브러리이며, 직관적으로 적용하고 조정할 수 있습니다.
+  - **Framer-motion:** 자연스러운 애니메이션과 트랜지션을 간편하게 구현할 수 있는 라이브러리며, 직관적으로 적용하고 조정할 수 있습니다.
 
 - **이미지:**
 
@@ -40,8 +40,15 @@
 
 <details>
   <summary>펼칠 시 캡쳐 이미지</summary>
-<img width="1901" alt="스크린샷 2024-08-20 오후 9 58 19" src="https://github.com/user-attachments/assets/9dc2da55-827a-4eea-818c-24f17b2b04bd">
+<img width="2156" alt="스크린샷 2024-08-21 오후 9 29 20" src="https://github.com/user-attachments/assets/89ba7e4b-c2a0-4854-9c2f-19b0bbb7b86e">
+<img width="2165" alt="스크린샷 2024-08-21 오후 9 29 36" src="https://github.com/user-attachments/assets/e9186259-2b64-455d-9789-847630358e28">
+<img width="2171" alt="스크린샷 2024-08-21 오후 9 29 56" src="https://github.com/user-attachments/assets/da05828b-ab9b-414e-ac55-44e559fabfb2">
+<img width="2168" alt="스크린샷 2024-08-21 오후 9 30 12" src="https://github.com/user-attachments/assets/67d54ba1-6991-4f4b-b71e-81096d915194">
+<img width="2162" alt="스크린샷 2024-08-21 오후 9 30 37" src="https://github.com/user-attachments/assets/ba6e1a29-accc-44bf-b95f-6430f4dcb363">
 
-### The
 
+### 반응형
+<img width="607" alt="스크린샷 2024-08-21 오후 9 31 03" src="https://github.com/user-attachments/assets/69b8b2e3-18ee-495b-b382-ae543521d1ed">
+<img width="615" alt="스크린샷 2024-08-21 오후 9 31 21" src="https://github.com/user-attachments/assets/e102c694-bf1c-4033-9fd5-c8e31ae5bd0b">
+<img width="621" alt="스크린샷 2024-08-21 오후 9 31 40" src="https://github.com/user-attachments/assets/2ddeb003-ee79-4888-a432-25b3eada38b5">
 </details>

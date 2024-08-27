@@ -105,14 +105,11 @@ export default function ClientAboutView({ data }) {
       </AnimationWrapper>
       <div className="grid grid-flow-row sm:grid-flow-col grid-cols-1 sm:grid-cols-2 gap-8">
         <AnimationWrapper className="flex w-full">
-          <motion.div variants={setVariants} className="h-full w-full p-4">
-            <Image
-              src={aboutMeImage}
-              alt="About me"
-              quality={100}
-              priority
-              style={{ height: "414" }}
-            />
+          <motion.div
+            variants={setVariants}
+            className="h-full w-full p-4 flex justify-center"
+          >
+            <Image src={aboutMeImage} alt="About me" quality={100} priority />
           </motion.div>
         </AnimationWrapper>
         <AnimationWrapper className={"flex items-center w-full p-4"}>
@@ -126,7 +123,7 @@ export default function ClientAboutView({ data }) {
                 className="w-full flex justify-center items-center"
                 variants={skillItemVariant}
               >
-                <button className="whitespace-nowrap text-ellipsis overflow-hidden py-3 w-[160px] px-6 border-[2px] border-blue-main bg-[#fff] text-[#000] font-bold rounded-lg text-lg tracking-widest hover:shadow-blue-main transition-all outline-none">
+                <button className="responsive-button whitespace-nowrap text-ellipsis overflow-hidden py-3 w-[160px] px-6 border-[2px] border-blue-main bg-[#fff] text-[#000] font-bold rounded-lg text-lg tracking-widest hover:shadow-blue-main transition-all outline-none">
                   {skill}
                 </button>
               </motion.div>

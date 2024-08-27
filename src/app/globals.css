@@ -92,6 +92,7 @@ body::-webkit-scrollbar-thumb {
   height: 10px;
   background: var(--red);
   transform-origin: 0%;
+  -webkit-transform-origin: 0%;
 }
 
 .project-wrapper {
@@ -135,6 +136,7 @@ body::-webkit-scrollbar-thumb {
 
 #progress {
   transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
 }
 
 circle {
@@ -168,9 +170,12 @@ circle {
   background: linear-gradient(to right, #00ccff, #7c0080);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .border-gradient {
   border-image: linear-gradient(to right, #00ccff, #7c0080);
+  -webkit-border-image: linear-gradient(to right, #00ccff, #7c0080);
   border-image-slice: 1;
+  -webkit-border-image-slice: 1;
 }

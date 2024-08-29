@@ -182,6 +182,7 @@ circle {
 
 @media (max-width: 1000px) {
   .responsive-button {
+    font-size: 0.875rem;
     padding: 0.5rem 1rem;
     width: 140px;
   }

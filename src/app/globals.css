@@ -130,6 +130,10 @@ body::-webkit-scrollbar-thumb {
   -webkit-border-radius: 1ex;
 }
 
+::-webkit-scrollbar-corner {
+  background: #fff3;
+}
+
 #progress {
   transform: rotate(-90deg);
   -webkit-transform: rotate(-90deg);
